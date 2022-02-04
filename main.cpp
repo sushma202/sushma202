@@ -1,32 +1,19 @@
 #include <iostream>
 using namespace std;
-class Student_Info{
-    int roll_number, grade;
-    char student_name[50];
-    public:
-        void read_data(int count){
-            cout<<" Enter student "<<count+1<<" information ";
-            cout<<"Name of the Student: ";
-            cin>>student_name;
-            cout<<"Roll Number: ";
-            cin>>roll_number;
-            cout<<"Grade";
-            cin>>grade;
-        }
-        void display_data(int count){
-            cout<<" Student "<<count+1;
-            cout<<"\nName of the Student: "<<student_name;
-            cout<<"\nRoll Number: "<<roll_number;
-            cout<<"\nGrade Secured: "<<grade;
-        }
+class Cal {
+public:
+static int add(int a,int b){
+return a + b;
+}
+static int add(int a, int b, int c)
+{
+return a + b + c;
+}
 };
-int main(){
-    Student_Info stud[3];
-    int i;
-    for(i=0; i<3; i++)
-        stud[i].read_data(i);
-    for(i=0; i<i; i++)
-        stud[i].display_data(i);
-    return 0;
+int main(void) {
+Cal C; // class object declaration.
+cout<<C.add(10, 20)<<endl;
+cout<<C.add(12, 20, 23);
+return 0;
 }
 
